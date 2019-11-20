@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 19, 2019 lúc 12:33 PM
+-- Thời gian đã tạo: Th10 20, 2019 lúc 10:46 AM
 -- Phiên bản máy phục vụ: 5.7.26
 -- Phiên bản PHP: 7.2.18
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `store`
+-- Cơ sở dữ liệu: `sho`
 --
 
 -- --------------------------------------------------------
@@ -137,6 +137,47 @@ CREATE TABLE IF NOT EXISTS `protypes` (
 INSERT INTO `protypes` (`ID_type`, `name_type`, `img_type`) VALUES
 (1, 'Male', 'male.jpg'),
 (2, 'Famale', 'famale.jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `sizes`
+--
+
+DROP TABLE IF EXISTS `sizes`;
+CREATE TABLE IF NOT EXISTS `sizes` (
+  `ID_size` int(11) NOT NULL AUTO_INCREMENT,
+  `forty_one` int(11) NOT NULL,
+  `forty_two` int(11) NOT NULL,
+  `forty_three` int(11) NOT NULL,
+  PRIMARY KEY (`ID_size`)
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `sizes`
+--
+
+INSERT INTO `sizes` (`ID_size`, `forty_one`, `forty_two`, `forty_three`) VALUES
+(1, 4, 3, 2),
+(2, 4, 3, 2),
+(3, 4, 3, 2),
+(4, 4, 3, 2),
+(5, 4, 3, 2),
+(6, 4, 3, 2),
+(7, 4, 3, 2),
+(8, 4, 3, 2),
+(9, 4, 3, 2),
+(10, 4, 3, 2),
+(11, 4, 3, 2),
+(12, 4, 3, 2),
+(13, 4, 3, 2),
+(14, 4, 3, 2),
+(15, 4, 3, 2),
+(16, 4, 3, 2),
+(17, 4, 3, 2),
+(18, 4, 3, 2),
+(19, 4, 3, 2),
+(20, 4, 3, 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
