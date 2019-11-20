@@ -16,25 +16,59 @@
     		<div class="row">
     			<div class="col-md-8 col-lg-10 order-md-last">
     				<div class="row">
-					<!--  -->
-					
-		    		<div class="row mt-5">
-		          <div class="col text-center">
-		            <div class="block-27">
-		              <ul>
-		                <li><a href="#">&lt;</a></li>
-		                <li class="active"><span>1</span></li>
-		                <li><a href="#">2</a></li>
-		                <li><a href="#">3</a></li>
-		                <li><a href="#">4</a></li>
-		                <li><a href="#">5</a></li>
-		                <li><a href="#">&gt;</a></li>
-		              </ul>
-		            </div>
-		          </div>
+						<!-- start:: In Tất cả Sản Phẩm Và Phân Trang-->
+						<?php 
+							$totalProduct = $countProduct / 8; // Tổng Số Trang 
+							$totalPage = ceil($totalProduct);
+							foreach($arrProductOfPages as $valueProduct)
+							{
+						?>
+						<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+							<div class="product d-flex flex-column">
+								<a href="#" class="img-prod"><img class="img-fluid" src="imagesProduct/{{$valueProduct->img}}" alt="Colorlib Template"> <!-- Chèn Hình Ảnh Ở Đây  -->
+									<div class="overlay"></div>
+								</a>
+								<div class="text py-3 pb-4 px-3">
+									<div class="d-flex">
+										<div class="cat">
+											<span>Lifestyle</span>
+										</div>
+										<div class="rating">
+											<p class="text-right mb-0">
+												<a href="#"><span class="ion-ios-star-outline"></span></a>
+												<a href="#"><span class="ion-ios-star-outline"></span></a>
+												<a href="#"><span class="ion-ios-star-outline"></span></a>
+												<a href="#"><span class="ion-ios-star-outline"></span></a>
+												<a href="#"><span class="ion-ios-star-outline"></span></a>
+											</p>
+										</div>
+									</div>
+									<h3><a href="#">{{$valueProduct->name}}</a></h3>
+									<div class="pricing">
+										<p><span class="price-sale">{{$valueProduct->unit_price}} VNĐ</span></p>
+									</div>
+									<p class="bottom-area d-flex px-3">
+										<a href="#" class="add-to-cart text-center py-1 mr-1"><span>Add <i class="ion-ios-add ml-1"></i></span></a>
+										<a href="#" class="buy-now text-center py-1">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+									</p>
+								</div>	
+    						</div>
+						</div>
+						<?php }?>
+						<div class="row mt-5">
+						<div class="col text-center">
+						<div class="block-27">
+							<ul>
+							<?php for($i = 1; $i <= $totalPage;$i++){?>
+							<li><a href="shop?page={{$i}}">{{$i}}</a></li>
+							<?php }?>
+							</ul>
+						</div>
+					</div>
 		        </div>
 		    	</div>
-
+				</div>
+				<!-- end:: In Tất cả Sản Phẩm Và Phân Trang-->
 		    	<div class="col-md-4 col-lg-2">
 		    		<div class="sidebar">
 							<div class="sidebar-box-2">
